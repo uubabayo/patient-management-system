@@ -1,0 +1,38 @@
+export const mockPatients = [
+  {
+    id: 1,
+    firstName: "Ibrahim",
+    lastName: "Bappah",
+    phone: "123-456-7890",
+    address: "Pantami, Gombe",
+    dateOfBirth: "1985-03-15",
+    gender: "Male",
+  },
+  {
+    id: 2,
+    firstName: "Aisha",
+    lastName: "Lawan",
+    phone: "123-456-7891",
+    address: "Tambari, Bauchi",
+    dateOfBirth: "1990-07-22",
+    gender: "Female",
+  },
+  {
+    id: 3,
+    firstName: "Isah",
+    lastName: "Usman",
+    phone: "123-456-7892",
+    address: "Federal low-cost, Gombe",
+    dateOfBirth: "1978-11-30",
+    gender: "Male",
+  },
+  {
+    id: 4,
+    firstName: "Fatima",
+    lastName: "Hassan",
+    phone: "123-456-7893",
+    address: "Abbott, Biu",
+    dateOfBirth: "1995-05-10",
+    gender: "Female",
+  },
+];
