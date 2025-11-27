@@ -7,6 +7,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import RegisterPatient from "./pages/RegisterPatient";
 import PatientList from "./pages/PatientList";
 import UpdateRecords from "./pages/UpdateRecords";
+import RecordVitals from "./pages/RecordVitals";
+import MedicationNotes from "./pages/MedicationNotes";
 
 function App() {
   return (
@@ -61,6 +63,22 @@ function App() {
           element={
             <ProtectedRoute>
               <UpdateRecords />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/record-vitals"
+          element={
+            <ProtectedRoute>
+              <RecordVitals />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/medication-notes"
+          element={
+            <ProtectedRoute>
+              <MedicationNotes />
             </ProtectedRoute>
           }
         />

@@ -1,21 +1,24 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { mockPatients } from "../utils/mockData";
+import { AuthContext } from "../context/AuthContext";
 
 function PatientList() {
   const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
 
-  // Use the mock data from central file
   const [patients] = useState(mockPatients);
 
   const handleBack = () => {
-    navigate("/record");
+    // Go back to the appropriate dashboard based on role
+    if (user?.role === "nurse") navigate("/nurse");
+    else if (user?.role === "doctor") navigate("/doctor");
+    else navigate("/record");
   };
 
-  const handleAddNew = () => {
-    navigate("/register-patient");
-  };
+  // Only show "Add New Patient" for health record staff
+  const showAddButton = user?.role === "record";
 
   return (
     <Layout>
@@ -25,9 +28,14 @@ function PatientList() {
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h3 className="mb-0">Patient List</h3>
               <div className="d-flex gap-2">
-                <button className="btn btn-success" onClick={handleAddNew}>
-                  Add New Patient
-                </button>
+                {showAddButton && (
+                  <button
+                    className="btn btn-success"
+                    onClick={() => navigate("/register-patient")}
+                  >
+                    Add New Patient
+                  </button>
+                )}
                 <button className="btn btn-secondary" onClick={handleBack}>
                   Back to Dashboard
                 </button>
