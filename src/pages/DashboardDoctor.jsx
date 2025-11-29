@@ -1,37 +1,59 @@
 import Layout from "../components/Layout";
+import { useNavigate } from "react-router-dom";
 
 function DashboardDoctor() {
+  const navigate = useNavigate();
+
   return (
     <Layout>
-      <h3 className="mb-4">Doctor Dashboard</h3>
+      <h3 className="text-center mb-4">Doctor Dashboard</h3>
 
-      <div className="row g-4">
+      <div className="row justify-content-center g-4">
         <div className="col-md-4">
           <div className="card shadow-sm">
-            <div className="card-body">
+            <div className="card-body text-center">
               <h5 className="card-title">View Patients</h5>
-              <p className="card-text">Access list of registered patients.</p>
-              <button className="btn btn-primary w-100">Open</button>
+              <p className="card-text">
+                Check patient list and medical details
+              </p>
+              <button
+                className="btn btn-primary w-100"
+                onClick={() => navigate("/patient-list")}
+              >
+                Patient List
+              </button>
             </div>
           </div>
         </div>
 
         <div className="col-md-4">
           <div className="card shadow-sm">
-            <div className="card-body">
-              <h5 className="card-title">Record Diagnosis</h5>
-              <p className="card-text">Add new diagnostic entries.</p>
-              <button className="btn btn-primary w-100">Open</button>
+            <div className="card-body text-center">
+              <h5 className="card-title">Add Diagnosis</h5>
+              <p className="card-text">
+                Record patient diagnosis and treatment
+              </p>
+              <button
+                className="btn btn-success w-100"
+                onClick={() => navigate("/add-diagnosis")}
+              >
+                New Diagnosis
+              </button>
             </div>
           </div>
         </div>
 
         <div className="col-md-4">
           <div className="card shadow-sm">
-            <div className="card-body">
-              <h5 className="card-title">View History</h5>
-              <p className="card-text">Review previous notes and summaries.</p>
-              <button className="btn btn-primary w-100">Open</button>
+            <div className="card-body text-center">
+              <h5 className="card-title">Medical History</h5>
+              <p className="card-text">Review patient medical records</p>
+              <button
+                className="btn btn-info w-100"
+                onClick={() => navigate("/medical-history")}
+              >
+                View History
+              </button>
             </div>
           </div>
         </div>

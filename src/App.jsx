@@ -9,6 +9,8 @@ import PatientList from "./pages/PatientList";
 import UpdateRecords from "./pages/UpdateRecords";
 import RecordVitals from "./pages/RecordVitals";
 import MedicationNotes from "./pages/MedicationNotes";
+import AddDiagnosis from "./pages/AddDiagnosis";
+import MedicalHistory from "./pages/MedicalHistory";
 
 function App() {
   return (
@@ -79,6 +81,22 @@ function App() {
           element={
             <ProtectedRoute>
               <MedicationNotes />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/add-diagnosis"
+          element={
+            <ProtectedRoute>
+              <AddDiagnosis />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/medical-history"
+          element={
+            <ProtectedRoute>
+              <MedicalHistory />
             </ProtectedRoute>
           }
         />

@@ -6,19 +6,23 @@ Project Overview
 
 The Patient Management System is a role-based web application that streamlines hospital workflows for different healthcare professionals. It provides separate dashboards and functionalities for Doctors, Nurses, and Health Record Staff.
 
-Features
+Core Features
 
-Role-Based Access Control
-Health Record Staff: Register new patients and update records, view patient list
-Nurse: Record vital signs and medication administration
-Doctor: View patient information and medical history
+Health Record Staff Features
+Patient Registration
+Patient List view with search and filtering
+Update patient records and information
 
-Core Modules
-Patient Registration: Capture patient demographics
-Patient List: View all registered patients in a table format
-Vital Signs Recording: Track temperature, blood pressure, pulse, respiration, and oxygen saturation
-Medication Notes: Record medication administration details
-Update Records: Search and modify existing patient information
+Nurse Features
+Record Vital Signs (Temperature, BP, Pulse, Respiration, O2 Saturation)
+Medication Administration Notes
+Patient List view (read-only)
+
+Doctor Features
+Patient Diagnosis and Treatment planning
+Comprehensive Medical History review
+View patient vitals and medication history
+Treatment plan documentation
 
 Technology Stack
 
@@ -32,7 +36,7 @@ Demo Accounts
 Use these credentials to test different roles:
 
 Record Staff
-Username: record1 password: pass123 Patient
+Username: record1 password: pass123
 Nurses
 Username: nurse1 Password: pass123
 Doctor
